@@ -1,0 +1,2 @@
+# JavaWeb-Project-CustomerManagement
+一个运用了MVC模式及JavaWeb三层框架的客户管理系统
