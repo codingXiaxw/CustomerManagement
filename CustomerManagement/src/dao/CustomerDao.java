@@ -81,7 +81,7 @@ public class CustomerDao
     public List<Customer> query(Customer customer) {
 
         try {
-            StringBuilder sql = new StringBuilder("select * from t_customer where 1=1");
+            StringBuilder sql = new StringBuilder("select * from t_customer where 1=1 ");
             List<Object> params = new ArrayList<>();
 
             String name = customer.getName();

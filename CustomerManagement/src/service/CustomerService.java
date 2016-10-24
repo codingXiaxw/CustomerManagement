@@ -40,6 +40,8 @@ public class CustomerService
     public List<Customer> query(Customer customer)
     {
         return customerDao.query(customer);
+
+
     }
 
 }
