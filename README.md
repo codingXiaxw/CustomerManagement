@@ -1,7 +1,7 @@
 ## JavaWeb项目之客户管理系统 
 
 ## 项目介绍
-
+详细讲解请见我博客[codingXiaxw'blog](http://codingxiaxw.cn)  博客地址为 http://codingxiaxw.cn   [客户管理系统项目地址](http://codingxiaxw.cn/2016/10/25/25-JavaWeb%E9%A1%B9%E7%9B%AE%E4%B9%8B%E5%AE%A2%E6%88%B7%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/)为  http://codingxiaxw.cn/2016/10/25/25-JavaWeb%E9%A1%B9%E7%9B%AE%E4%B9%8B%E5%AE%A2%E6%88%B7%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/
 ### 功能介绍
 
 - 添加客户:添加客户的信息，包括姓名，性别，手机，邮箱，自我描述
