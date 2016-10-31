@@ -2,6 +2,7 @@ package service;
 
 import dao.CustomerDao;
 import domain.Customer;
+import domain.PageBean;
 
 import java.util.List;
 
@@ -17,9 +18,13 @@ public class CustomerService
         customerDao.add(customer);
     }
 
-    public List<Customer> findAll()
+//    public List<Customer> findAll()
+//    {
+//        return customerDao.findAll();
+//    }
+    public PageBean<Customer> findAll(int pc,int pr)
     {
-        return customerDao.findAll();
+        return customerDao.findAll(pc,pr);
     }
 
     public Customer find(String id)
@@ -37,9 +42,9 @@ public class CustomerService
         customerDao.delete(id);
     }
 
-    public List<Customer> query(Customer customer)
+    public PageBean<Customer> query(Customer customer,int pc,int pr)
     {
-        return customerDao.query(customer);
+        return customerDao.query(customer,pc,pr);
 
 
     }

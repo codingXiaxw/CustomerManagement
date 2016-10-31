@@ -13,7 +13,7 @@
 </head>
 <body>
     <h3 align="center">高级搜索</h3>
-    <form action="<c:url value="/CustomerServlet"/>" method="post">
+    <form action="<c:url value="/CustomerServlet"/>" method="get">
         <input type="hidden" name="method" value="query">
         <table border="0" align="center" width="40%" style="margin-left: 100px">
             <tr>
