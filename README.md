@@ -44,9 +44,11 @@
 IntelliJ IDEA  +  MySQL
 
 ## 使用方法
-1.git clone https://github.com/codingXiaxw/JavaWeb-Project-CustomerManagement.git  
 
-2.使用IntelliJ IDEA导入打开即可。
+1. git clone `https://github.com/codingXiaxw/CustomerManagement.git`  
+2. 使用IntelliJ IDEA导入打开
+3. 部署Tomcat并启动
+4. enjoy it
 
 ## 项目功能截图
 ### 添加客户
