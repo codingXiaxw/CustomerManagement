@@ -13,7 +13,7 @@
 </head>
 <body>
 <h3 align="center">添加客户</h3>
-<form action="<c:url value='/CustomerServlet'/>" method="post" >
+<form action="<c:url value='/CustomerServlet'/>" method="post">
     <input type="hidden" name="method" value="add">
     <table border="0" align="center" width="40%" style="margin-left: 100px">
         <tr>
@@ -34,7 +34,7 @@
                 <label for="female">女</label>
             </td>
             <td>
-                <label id="genderError"class="error">&nbsp;</label>
+                <label id="genderError" class="error">&nbsp;</label>
             </td>
         </tr>
         <tr>
@@ -43,7 +43,7 @@
                 <input type="text" name="phone" id="phone"/>
             </td>
             <td>
-                <label id="phoneError"class="error">&nbsp;</label>
+                <label id="phoneError" class="error">&nbsp;</label>
             </td>
         </tr>
         <tr>
@@ -52,7 +52,7 @@
                 <input type="text" name="email" id="email"/>
             </td>
             <td>
-                <label id="emailError"class="error">&nbsp;</label>
+                <label id="emailError" class="error">&nbsp;</label>
             </td>
         </tr>
         <tr>
@@ -61,7 +61,7 @@
                 <textarea rows="5" cols="30" name="description"></textarea>
             </td>
             <td>
-                <label id="discriptionError"class="error">&nbsp;</label>
+                <label id="descriptionError" class="error">&nbsp;</label>
             </td>
         </tr>
         <tr>

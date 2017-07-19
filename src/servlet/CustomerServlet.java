@@ -1,7 +1,6 @@
 package servlet;
 
 import cn.itcast.commons.CommonUtils;
-import cn.itcast.servlet.*;
 import cn.itcast.servlet.BaseServlet;
 import domain.Customer;
 import domain.PageBean;
@@ -12,12 +11,12 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
-import java.util.List;
 
 /**
  * Created by codingBoy on 16/10/23.
  */
 public class CustomerServlet extends BaseServlet {
+
     private CustomerService customerService = new CustomerService();
 
     public String add(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -52,23 +51,21 @@ public class CustomerServlet extends BaseServlet {
         *   如果pc参数不存在，说明pc＝1
         *   如果pc参数存在，需要转换成int类型
         */
-        int pc=getPc(request);
+        int pc = getPc(request);
 
-        int pr=10;//给定pr的值，每页10行纪录
+        int pr = 10;//给定pr的值，每页10行纪录
 
-        PageBean<Customer> pb= customerService.findAll(pc,pr);
+        PageBean<Customer> pb = customerService.findAll(pc, pr);
         pb.setUrl(getUrl(request));
 
-        request.setAttribute("pb",pb);
+        request.setAttribute("pb", pb);
 
         return "f:/list.jsp";
     }
 
-    private int getPc(HttpServletRequest request)
-    {
-        String value=request.getParameter("pc");
-        if (value==null||value.trim().isEmpty())
-        {
+    private int getPc(HttpServletRequest request) {
+        String value = request.getParameter("pc");
+        if (value == null || value.trim().isEmpty()) {
             return 1;
         }
         return Integer.parseInt(value);
@@ -118,65 +115,59 @@ public class CustomerServlet extends BaseServlet {
 
     public String query(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        Customer customer=CommonUtils.toBean(request.getParameterMap(),Customer.class);
+        Customer customer = CommonUtils.toBean(request.getParameterMap(), Customer.class);
 
 //        System.out.println(getUrl(request));
-        customer=encoding(customer);
+        customer = encoding(customer);
 
-        int pc=getPc(request);
-        int pr=10;
+        int pc = getPc(request);
+        int pr = 10;
 
-        PageBean<Customer> pb=  customerService.query(customer,pc,pr);
+        PageBean<Customer> pb = customerService.query(customer, pc, pr);
 
         pb.setUrl(getUrl(request));
 
-        request.setAttribute("pb",pb);
+        request.setAttribute("pb", pb);
         return "/list.jsp";
 
     }
 
     private Customer encoding(Customer customer) throws UnsupportedEncodingException {
-        String name=customer.getName();
-        String gender=customer.getGender();
-        String phone=customer.getPhone();
-        String email=customer.getEmail();
+        String name = customer.getName();
+        String gender = customer.getGender();
+        String phone = customer.getPhone();
+        String email = customer.getEmail();
 
-        if (name!=null&&!name.trim().isEmpty())
-        {
-            name=new String(name.getBytes("ISO-8859-1"),"utf-8");
+        if (name != null && !name.trim().isEmpty()) {
+            name = new String(name.getBytes("ISO-8859-1"), "utf-8");
             customer.setName(name);
         }
-        if (gender!=null&&!gender.trim().isEmpty())
-        {
-            gender=new String(gender.getBytes("ISO-8859-1"),"utf-8");
+        if (gender != null && !gender.trim().isEmpty()) {
+            gender = new String(gender.getBytes("ISO-8859-1"), "utf-8");
             customer.setGender(gender);
         }
-        if (phone!=null&&!phone.trim().isEmpty())
-        {
-            phone=new String(phone.getBytes("ISO-8859-1"),"utf-8");
+        if (phone != null && !phone.trim().isEmpty()) {
+            phone = new String(phone.getBytes("ISO-8859-1"), "utf-8");
             customer.setPhone(phone);
         }
-        if (email!=null&&!email.trim().isEmpty())
-        {
-            email=new String(email.getBytes("ISO-8859-1"),"utf-8");
+        if (email != null && !email.trim().isEmpty()) {
+            email = new String(email.getBytes("ISO-8859-1"), "utf-8");
             customer.setEmail(email);
         }
         return customer;
     }
 
-    private String getUrl(HttpServletRequest request)
-    {
-        String contextPath=request.getContextPath();
-        String serveltPath=request.getServletPath();
-        String queryString=request.getQueryString();
+    private String getUrl(HttpServletRequest request) {
+        String contextPath = request.getContextPath();
+        String servletPath = request.getServletPath();
+        String queryString = request.getQueryString();
 
-        if (queryString.contains("&pc="))
-        {
-            int index=queryString.lastIndexOf("&pc=");
-            queryString=queryString.substring(0,index);
+        if (queryString.contains("&pc=")) {
+            int index = queryString.lastIndexOf("&pc=");
+            queryString = queryString.substring(0, index);
         }
 
-        return contextPath+serveltPath+"?" +queryString;
+        return contextPath + servletPath + "?" + queryString;
     }
 }
 
