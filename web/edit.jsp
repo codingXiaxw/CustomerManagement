@@ -29,9 +29,9 @@
         <tr>
             <td>客户性别</td>
             <td>
-                <input type="radio" name="gender" value="male" id="male" <c:if test="${customer.gender eq 'male'}"/>checked="checked"/>
+                 <input type="radio" name="gender" value="male" id="male" <c:if test="${customer.gender eq 'male'}">checked="checked"</c:if>/>
                 <label for="male">男</label>
-                <input type="radio" name="gender" value="female" id="female" <c:if test="${customer.gender eq 'female'}"/> checked="checked"/>
+                <input type="radio" name="gender" value="female" id="female" <c:if test="${customer.gender eq 'female'}">checked="checked"</c:if> />
                 <label for="female">女</label>
             </td>
             <td>
