@@ -47,8 +47,10 @@ IntelliJ IDEA  +  MySQL
 
 1. git clone `https://github.com/codingXiaxw/CustomerManagement.git`  
 2. 使用IntelliJ IDEA导入打开
-3. 部署Tomcat并启动
-4. enjoy it
+3. 创建相应的数据库及表
+4. 修改`CustomerManagement/src`下`c3p0-config.xml`中数据库相关信息
+5. 部署Tomcat并启动
+6. enjoy it
 
 ## 项目功能截图
 ### 添加客户
