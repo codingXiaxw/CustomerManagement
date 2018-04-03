@@ -13,8 +13,8 @@
 </head>
 <body>
     <h3 align="center">高级搜索</h3>
-    <form action="<c:url value="/CustomerServlet"/>" method="get">
-        <input type="hidden" name="method" value="query">
+    <form action="<c:url value="/CustomerServlet?method=query"/>" method="get">	//Servlet中的getUrl方法需要读取到menthod参数
+        
         <table border="0" align="center" width="40%" style="margin-left: 100px">
             <tr>
                 <td width="100px">客户名称</td>
