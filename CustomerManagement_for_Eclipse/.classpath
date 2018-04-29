@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/c3p0-0.9.5.2.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/commons-beanutils-1.9.3.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/commons-collections-3.2.2.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/commons-dbutils-1.6.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/commons-logging-1.2.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/itcast-tools-1.4.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/jstl-1.2.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/mchange-commons-java-0.2.11.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/mysql-connector-java-5.0.8-bin.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7">
+		<attributes>
+			<attribute name="owner.project.facets" value="java"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jst.server.core.container/org.eclipse.jst.server.tomcat.runtimeTarget/Apache Tomcat v7.0.85"/>
+	<classpathentry kind="output" path="build/classes"/>
+</classpath>
