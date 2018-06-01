@@ -41,13 +41,13 @@
 - domain
 
 ## 搭建环境
-IntelliJ IDEA  +  MySQL
+IntelliJ IDEA  +  MySQL  或者  eclipse + MySQL
 
 ## 使用方法
 
 1. git clone `https://github.com/codingXiaxw/CustomerManagement.git`  
-2. 使用IntelliJ IDEA导入打开
-3. 创建相应的数据库及表
+2. 使用IntelliJ IDEA导入打开 或者 使用eclipse打开`CustomerManagement_for_Eclipse`项目
+3. 使用eclipse/src/create_table.sql文件中的sql语句创建相应的数据库及表
 4. 修改`CustomerManagement/src`下`c3p0-config.xml`中数据库相关信息
 5. 部署Tomcat并启动
 6. enjoy it
