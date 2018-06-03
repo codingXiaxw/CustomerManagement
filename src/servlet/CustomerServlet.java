@@ -118,6 +118,12 @@ public class CustomerServlet extends BaseServlet {
         Customer customer = CommonUtils.toBean(request.getParameterMap(), Customer.class);
 
 //        System.out.println(getUrl(request));
+        if(customer.getName()==null && customer.getGender()==null && customer.getEmail()==null && customer.getPhone()==null  ) {
+			c=(Customer)request.getSession().getAttribute("c");
+		}else {
+		c = encoding(c);
+		request.getSession().setAttribute("c", c);
+		}
         customer = encoding(customer);
 
         int pc = getPc(request);
